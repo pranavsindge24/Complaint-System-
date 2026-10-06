@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusDesk — Smart Cloud Complaint Management</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232563eb'/><text x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>C</text></svg>" />
+</head>
+<body class="auth-body">
+  <div class="auth-wrap">
+    <div class="auth-brand">
+      <div class="brand-mark">CD</div>
+      <div>
+        <h1>CampusDesk</h1>
+        <p>Smart Cloud Complaint Management System</p>
+      </div>
+    </div>
+
+    <div class="auth-card">
+      <div class="auth-tabs" id="authTabs">
+        <button class="auth-tab active" data-tab="login">Sign in</button>
+        <button class="auth-tab" data-tab="register">Student registration</button>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <label class="field">
+          <span>Email address</span>
+          <input type="email" name="email" placeholder="you@campus.edu" autocomplete="username" required />
+        </label>
+        <label class="field">
+          <span>Password</span>
+          <input type="password" name="password" placeholder="••••••••" autocomplete="current-password" required />
+        </label>
+        <div class="role-hint">
+          <span class="dot dot-student"></span> Students
+          <span class="dot dot-dept"></span> Departments
+          <span class="dot dot-admin"></span> Super Admin
+          <small>Use the account issued to you. One login for all three dashboards.</small>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit" id="loginBtn">Sign in</button>
+      </form>
+
+      <form id="registerForm" class="auth-form hidden">
+        <label class="field">
+          <span>Full name</span>
+          <input type="text" name="name" placeholder="e.g. Aditya Sharma" required />
+        </label>
+        <label class="field">
+          <span>College email</span>
+          <input type="email" name="email" placeholder="you@campus.edu" required />
+        </label>
+        <div class="field-row">
+          <label class="field">
+            <span>Roll number</span>
+            <input type="text" name="rollNo" placeholder="e.g. CS-2024-017" />
+          </label>
+          <label class="field">
+            <span>Phone (optional)</span>
+            <input type="text" name="phone" placeholder="10-digit number" />
+          </label>
+        </div>
+        <label class="field">
+          <span>Password</span>
+          <input type="password" name="password" placeholder="Minimum 6 characters" required />
+        </label>
+        <button class="btn btn-primary btn-block" type="submit" id="registerBtn">Create student account</button>
+        <p class="auth-note">Departments and administrators are created by the Super Admin.</p>
+      </form>
+    </div>
+
+    <p class="auth-foot">Role-based access · GridFS image storage · Automatic categorisation &amp; SLA tracking</p>
+  </div>
+  <div id="toastHost" class="toast-host"></div>
+  <script src="/js/common.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>
